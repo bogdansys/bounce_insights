@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-
+const path = require('path');
 const app = express();
 const port = 3001;
 
@@ -15,6 +15,15 @@ app.get('/country/:name', async (req, res) => {
         console.error(error);
         res.status(500).send('An error occurred while fetching country data.');
     }
+});
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'my-react-app/build')));
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/my-react-app/build/index.html'));
 });
 
 app.listen(port, () => {
