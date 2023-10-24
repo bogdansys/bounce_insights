@@ -18,12 +18,12 @@ app.get('/country/:name', async (req, res) => {
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'my-react-app/build')));
+app.use(express.static(path.join(__dirname, 'forntend/build')));
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'/my-react-app/build/index.html'));
+    res.sendFile(path.join(__dirname+'/forntend/build/index.html'));
 });
 
 app.listen(port, () => {
