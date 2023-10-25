@@ -78,6 +78,7 @@ label {
 }
 
 .error-message {
-  color: red;
+  color: Black;
+  bold: true;
   margin-top: 20px;
 }
