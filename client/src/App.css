@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.App {
+  text-align: center;
+  background-color: #FFC0CB;
+  background-image: url('https://images.pexels.com/photos/907485/pexels-photo-907485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-container {
+  background-color: rgba(147, 112, 219, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  transition: transform .2s;
+}
+
+.form-container:hover {
+  transform: scale(1.1);
+}
+
+input[type="text"], input[type="submit"] {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 192, 203, 0.5);
+  border: none;
+
+  border-radius: 10px;
+
+  transition: transform .2s;
+}
+
+input[type="text"]:hover, input[type="submit"]:hover {
+  transform: scale(1.1);
+}
+
+input[type="submit"] {
+  cursor: pointer;
+
+  transition-duration: .4s;
+}
+
+input[type="submit"]:active {
+  background-color: #FF69B4; /* Change color when button is pressed */
+
+  box-shadow: none; /* Remove box shadow when button is pressed */
+
+  transform: translateY(4px); /* Move button down when pressed */
+}
+
+label {
+  display: block;
+
+  margin-bottom: .5em;
+
+  color: rgba(255, 192, 203, 0.5); /* Semi-transparent pink text */
+}
+
+.country-data {
+  text-align: left;
+  width: fit-content;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 192, 203, 0.5); /* Semi-transparent pink */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.country-data img {
+  width: auto;
+  height: auto;
+}
+
+.error-message {
+  color: red;
+  margin-top: 20px;
+}
