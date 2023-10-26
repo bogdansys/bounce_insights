@@ -29,7 +29,7 @@ app.get('*', (req, res) => {
 
 if (process.env.NODE_ENV !== 'test') {
     app.listen(port, () => {
-        console.log(`Server is running at https://pleasant-lamb-lab-coat.cyclic.app/${port}`);
+        console.log(`Server is running at https://pleasant-lamb-lab-coat.cyclic.app/`);
     });
 }
 
