@@ -24,7 +24,7 @@ function App() {
     }
 
     // Send a GET request to the Express server
-    fetch(`http://localhost:3001/country/${country}`)
+    fetch(`https://pleasant-lamb-lab-coat.cyclic.app/${country}`)
         .then(response => response.json())
         .then(data => {
           // Store the data in the component's state
